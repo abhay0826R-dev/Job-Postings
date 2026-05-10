@@ -5,11 +5,11 @@ const JobCards = () => {
   return (
     <div className='parent'>
         <Card />
-        <div className='card'></div>
-        <div className='card'></div>
-        <div className='card'></div>
-        <div className='card'></div>
-        <div className='card'></div>
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
     </div>
   )
 }

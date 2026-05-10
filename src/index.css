@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Inter', sans-serif;
 }
 
 html,
@@ -18,13 +18,13 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  max-width: 1200px;
+  max-width: 1500px;
   margin: 0 auto;
 }
 
 .card {
-  height: 400px;
-  width: 300px;
+  height: 425px;
+  width: 350px;
   border-radius: 30px;
   background-color: #fff;
   margin: 50px;
@@ -74,10 +74,11 @@ body {
   margin: 0 0;
   gap: 10px;
   align-items: center;
+  margin-bottom: 13px;
 }
 
 .card-middle {
-  margin: 0 auto auto 20px;
+  margin: 15px auto auto 20px;
 }
 
 .Job-Post-Time {
@@ -89,6 +90,12 @@ body {
   font-size: 20px;
   padding: 0;
   margin: 0 0 0 0;
+  font-weight: 600;
+}
+
+.Job-Title {
+  font-weight: 900;
+  font-size: 25px;
 }
 
 .card-bottom {
@@ -96,7 +103,7 @@ body {
 }
 
 .Job-Tag {
-  background-color: #d9d9d9;
+  background-color: rgba(210, 210, 210, 0.5);
   padding: 4px 10px;
   border-radius: 4px;
 }
@@ -104,4 +111,24 @@ body {
 .Job-Tags {
   display: flex;
   gap: 5px;
+  margin-top: 10px;
+}
+
+.card-bottom {
+  display: flex;  
+  justify-content: space-between;
+  border-top: #000 1px solid;
+  padding: 10px;
+}
+
+.Job-Apply-Button {
+  color: rgb(255, 255, 255, 0.9);
+  background-color: black;
+  padding: 5px 10px;
+  border-radius: 6px;
+}
+
+.Job-Salary {
+  font-weight: bold;
+  margin: auto 0px;
 }
