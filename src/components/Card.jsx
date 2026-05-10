@@ -2,8 +2,9 @@ import React from 'react'
 import InstaLogo from "../assets/InstagramLogo.jpeg"
 import saveIcon from "../assets/SaveJobIcon.jpeg"
 import locationIcon from "../assets/locationIcon.jpeg"
+import defaultLogo from "../assets/defaultLogo.jpeg"
 
-const Card = ({ logo, companyName, postTime, title, salary, location, tags=[] }) => {
+const Card = ({ logo=defaultLogo, companyName="Not Provided", postTime="Not Provided", title="Not Provided", salary=NaN, location="Not Provided", tags=[] }) => {
   return (
       <div className='card'>
 
