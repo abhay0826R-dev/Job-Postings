@@ -5,7 +5,7 @@ import defaultLogo from "../assets/defaultLogo.jpeg"
 
 const Card = ({ logo=defaultLogo, companyName="Not Provided", postTime="Not Provided", title="Not Provided", salary=NaN, location="Not Provided", tags=[] }) => {
   return (
-      <div className='card'>
+      <article>
 
         <div className='card-top'>
             <img src={logo} className='logo' />
@@ -20,7 +20,7 @@ const Card = ({ logo=defaultLogo, companyName="Not Provided", postTime="Not Prov
                 <span className='Company-Name'>{companyName}</span>
                 <span className='Job-Post-Time'>{postTime}</span>
             </div>
-            <span className='Job-Title'>{title}</span>
+            <h2 className='Job-Title'>{title}</h2>
             <div className='Job-Tags'>
                 {tags.map((tag, i) => (
                     <span key={i} className='Job-Tag'>{tag}</span>
@@ -30,7 +30,7 @@ const Card = ({ logo=defaultLogo, companyName="Not Provided", postTime="Not Prov
 
         <div className='card-bottom'>
             <div id="Salary-Location-Div">
-                <span className='Job-Salary'>{salary}</span>
+                <h5 className='Job-Salary'>{salary}</h5>
                 <div className='Job-Location'>
                     <img src={locationIcon} />
                     <span className='Job-Location-text'>{location}</span>
@@ -40,7 +40,7 @@ const Card = ({ logo=defaultLogo, companyName="Not Provided", postTime="Not Prov
             
         </div>
 
-      </div>
+      </article>
   )
 }
 
