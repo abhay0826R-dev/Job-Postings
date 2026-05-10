@@ -58,13 +58,19 @@ body {
 }
 
 .saveJobButton {
-  padding: 3px 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px 10px;
+  gap: 1px;
   background-color: #fffffffc;
   border: #dedede 1px solid;
   border-radius: 5px;
   height: 20px;
   width: 60px;
-  margin: 15px 15px;
+  margin: 20px 25px;
+  font-weight: 100;
+  color: #00000097;
 }
 
 
@@ -78,7 +84,7 @@ body {
 }
 
 .card-middle {
-  margin: 15px auto auto 20px;
+  margin: 0 20px;
 }
 
 .Job-Post-Time {
@@ -98,10 +104,6 @@ body {
   font-size: 25px;
 }
 
-.card-bottom {
-  margin: auto 10px 5px 10px;
-}
-
 .Job-Tag {
   background-color: rgba(210, 210, 210, 0.5);
   padding: 4px 10px;
@@ -111,13 +113,15 @@ body {
 .Job-Tags {
   display: flex;
   gap: 5px;
-  margin-top: 10px;
+  margin-top: 20px;
+  flex-wrap: wrap;
 }
 
 .card-bottom {
+  margin: auto 10px 5px 10px;
   display: flex;  
   justify-content: space-between;
-  border-top: #000 1px solid;
+  border-top: rgba(0, 0, 0, 0.289) 1px solid;
   padding: 10px;
 }
 
@@ -131,4 +135,24 @@ body {
 .Job-Salary {
   font-weight: bold;
   margin: auto 0px;
+}
+
+.Job-Location {
+  display: flex;
+  gap: 3px;
+  opacity: 35%;
+}
+
+.Job-Location img {
+  width: 15px;
+  height: 15px;
+}
+
+.Job-Location span {
+  font-weight: 100;
+  font-size: 13px;
+}
+
+.Salary-Location-Div {
+  display: block;
 }
