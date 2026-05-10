@@ -4,8 +4,7 @@
 }
 
 html,
-body,
-#root {
+body {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -13,15 +12,28 @@ body,
 }
 
 .parent {
-  height: 100vh;
+  height: 100%;
   width: 100%;
-  background-color: #111;
+  background-color: #dddddd;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .card {
   height: 400px;
   width: 300px;
   border-radius: 30px;
-  background-color: white;
-  margin: 40px;
+  background-color: #fff;
+  margin: 50px;
+  box-shadow: 0 0 40px #707070;
+}
+
+.logo {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  margin: 10px;
 }

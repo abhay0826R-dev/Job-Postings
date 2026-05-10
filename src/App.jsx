@@ -1,10 +1,12 @@
 import React from 'react'
+import JobCards from './components/JobCards'
 
 const App = () => {
   return (
-    <div className='parent'>
-      <div className='card'></div>
-    </div>
+    <>
+      <header><h1>Job Posting</h1></header>
+      <JobCards />
+    </>
   )
 }
 
