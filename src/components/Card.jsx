@@ -1,5 +1,4 @@
 import React from 'react'
-import InstaLogo from "../assets/InstagramLogo.jpeg"
 import saveIcon from "../assets/SaveJobIcon.jpeg"
 import locationIcon from "../assets/locationIcon.jpeg"
 import defaultLogo from "../assets/defaultLogo.jpeg"
