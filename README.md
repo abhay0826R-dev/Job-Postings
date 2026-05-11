@@ -1,16 +1,49 @@
-# React + Vite
+# Job Portal
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive job listing web app built with React + Vite. Browse job postings from top companies, filter by tags, save listings, and apply — all from a clean, minimal UI.
 
-Currently, two official plugins are available:
+🔗 **[Live Demo](https://job-postings-murex.vercel.app/)**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Screenshots
+<img width="1920" height="974" alt="image" src="https://github.com/user-attachments/assets/93ffa1e3-5c27-42fb-bb95-61f3b1b2917b" />
+<hr>
+<img width="1920" height="1006" alt="image" src="https://github.com/user-attachments/assets/c3415feb-01dd-4773-b5f3-698332ebff69" />
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Browse job cards with company logo, role, salary, location, and tags
+- Save jobs with a bookmark button
+- Responsive grid layout across desktop and mobile
+- Dropdown navigation (Jobs / About / Profile)
+- Fast dev experience with Vite HMR
+
+## Tech Stack
+
+- React 18
+- Vite
+- CSS (no framework)
+
+## Getting Started
+
+```bash
+git clone https://github.com/your-username/job-portal.git
+cd job-portal
+npm install
+npm run dev
+```
+Open the local URL shown in your terminal after `npm run dev`.
+
+## Project Structure
+
+```
+src/
+├── assets/          # Icons and logos
+├── components/
+│   ├── Card.jsx     # Individual job card
+│   └── JobCards.jsx # Card grid
+├── App.jsx
+└── index.css
+```
