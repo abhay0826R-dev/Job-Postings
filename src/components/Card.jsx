@@ -5,7 +5,7 @@ import defaultLogo from "../assets/defaultCompanyIcon.svg"
 
 const Card = ({ logo=defaultLogo, companyName="Not Provided", postTime="Not Provided", title="Not Provided", salary=NaN, location="Not Provided", tags=[] }) => {
   return (
-      <article>
+      <article className='JobCard'>
 
         <div className='card-top'>
             <img src={logo} className='logo' />

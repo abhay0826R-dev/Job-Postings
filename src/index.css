@@ -151,6 +151,11 @@ article {
   border-radius: 6px;
 }
 
+.Job-Apply-Button:hover {
+  background-color: rgb(0, 0, 0, 0.9);
+  color: rgb(255, 255, 255);
+}
+
 .Job-Salary {
   font-weight: bold;
   margin: auto 0px;
