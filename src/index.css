@@ -84,6 +84,14 @@ article {
   color: #00000097;
 }
 
+.saveJobButton:hover {
+  background-color: #d0d0d0fc;
+}
+
+.saveJobButton:hover img {
+  opacity: 60%;
+}
+
 
 .Job-Company-Time {
   display: flex;

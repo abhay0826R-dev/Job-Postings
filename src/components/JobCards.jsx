@@ -50,7 +50,7 @@ const JobCards = () => {
         title="Product Designer" salary="$95/hr" location="India, Pune"
         tags={["Contract", "Remote"]}/>
 
-        <Card logo={spotifyLogo} companyName="Spotify" postTime="1 week ago"
+        <Card companyName="Spotify" postTime="1 week ago"
         title="Audio Engineer" salary="$80k/yr" location="India, Delhi"
         tags={["Full-Time", "In Office"]}/>
     </main>

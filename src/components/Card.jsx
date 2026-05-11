@@ -1,7 +1,7 @@
 import React from 'react'
-import saveIcon from "../assets/SaveJobIcon.jpeg"
-import locationIcon from "../assets/locationIcon.jpeg"
-import defaultLogo from "../assets/defaultLogo.jpeg"
+import SaveIcon from "../assets/saveIcon.svg"
+import locationIcon from "../assets/locationIcon.svg"
+import defaultLogo from "../assets/defaultCompanyIcon.svg"
 
 const Card = ({ logo=defaultLogo, companyName="Not Provided", postTime="Not Provided", title="Not Provided", salary=NaN, location="Not Provided", tags=[] }) => {
   return (
@@ -11,7 +11,7 @@ const Card = ({ logo=defaultLogo, companyName="Not Provided", postTime="Not Prov
             <img src={logo} className='logo' />
             <button className='saveJobButton'>
                 Save
-                <img src={saveIcon} className='savelogo' />
+                <img src={SaveIcon} className='savelogo' />
             </button>
         </div>
 
