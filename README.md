@@ -15,9 +15,9 @@ A responsive job listing web app built with React + Vite. Browse job postings fr
 ## Features
 
 - Browse job cards with company logo, role, salary, location, and tags
-- Save jobs with a bookmark button
-- Responsive grid layout across desktop and mobile
-- Dropdown navigation (Jobs / About / Profile)
+- ToAdd: Save jobs with a bookmark button
+- ToAdd: Responsive grid layout across desktop and mobile
+- ToAdd: Dropdown navigation (Jobs / About / Profile)
 - Fast dev experience with Vite HMR
 
 ## Tech Stack
