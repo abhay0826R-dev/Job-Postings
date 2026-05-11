@@ -4,6 +4,7 @@ import JobCards from './components/JobCards'
 const App = () => {
   return (
     <>
+      <title>Job Portal</title>
       <header>
         <div>
           <h1 className='main-head'>Job Portal</h1>
