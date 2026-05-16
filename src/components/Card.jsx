@@ -3,7 +3,7 @@ import SaveIcon from "../assets/saveIcon.svg"
 import locationIcon from "../assets/locationIcon.svg"
 import defaultLogo from "../assets/defaultCompanyIcon.svg"
 
-const Card = ({ logo=defaultLogo, companyName="Not Provided", postTime="Not Provided", title="Not Provided", salary=NaN, location="Not Provided", tags=[] }) => {
+const Card = ({ logo=defaultLogo, companyName="Not Provided", postTime="Not Provided", title="Not Provided", salary=NaN, location="Not Provided", tags=[], url }) => {
   return (
       <article className='JobCard overflow-hidden'>
 
@@ -36,7 +36,9 @@ const Card = ({ logo=defaultLogo, companyName="Not Provided", postTime="Not Prov
                     <span className='Job-Location-text'>{location}</span>
                 </div>
             </div>
-            <button className='Job-Apply-Button'>Apply now</button>
+            <a href={url} target="_blank">
+                <button className='Job-Apply-Button'>Apply now</button>
+            </a>
             
         </div>
 

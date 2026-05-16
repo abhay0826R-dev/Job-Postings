@@ -27,6 +27,7 @@ const JobCards = () => {
         salary: "Not Disclosed",
         location: elem.location,
         tags: elem.tags,
+        url: elem.url
     }))
     setJobs(jobCards)
   }
