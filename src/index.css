@@ -36,10 +36,6 @@ header {
   font-weight: 200;
 }
 
-.dropdown-menus span {
-  border-bottom: rgb(191, 191, 191) 1px solid;
-}
-
 .main-head {
   font-weight: 900;
   margin-left: 30px;
@@ -95,6 +91,7 @@ article {
   margin-left: 2px;
   margin-bottom: 0px;
 }
+
 
 .saveJobButton {
   display: flex;

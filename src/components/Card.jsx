@@ -5,7 +5,7 @@ import defaultLogo from "../assets/defaultCompanyIcon.svg"
 
 const Card = ({ logo=defaultLogo, companyName="Not Provided", postTime="Not Provided", title="Not Provided", salary=NaN, location="Not Provided", tags=[], url }) => {
   return (
-      <article className='JobCard overflow-hidden'>
+      <article className='JobCard overflow-hidden hover:scale-105 transition-transform'>
 
         <div className='card-top'>
             <img src={logo} className='logo' />
@@ -37,7 +37,7 @@ const Card = ({ logo=defaultLogo, companyName="Not Provided", postTime="Not Prov
                 </div>
             </div>
             <a href={url} target="_blank">
-                <button className='Job-Apply-Button'>Apply now</button>
+                <button className='Job-Apply-Button hover:cursor-pointer'>Apply now</button>
             </a>
             
         </div>

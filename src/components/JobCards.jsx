@@ -23,7 +23,7 @@ const JobCards = () => {
         logo: logos[Math.floor(Math.random() * logos.length)],
         companyName: elem.company_name,
         postTime: postTime[Math.floor(Math.random() * postTime.length)],
-        title: elem.title.split("/[-:(]/")[0].slice(0, 14),
+        title: elem.title.split(":")[0].slice(0, 25) + "...",
         salary: "Not Disclosed",
         location: elem.location,
         tags: elem.tags,
