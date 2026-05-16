@@ -1,32 +1,44 @@
 import React from 'react'
 import Card from './Card'
-import appleLogo from '../assets/appleLogo.jpeg'
-import googleLogo from '../assets/googleLogo.jpeg'
-import instagramLogo from '../assets/InstagramLogo.jpeg'
-import pinterestLogo from '../assets/PinterestLogo.jpeg'
-import spotifyLogo from '../assets/SpotifyLogo.png'
-import telegramLogo from '../assets/TelegramLogo.jpeg'
+import { useEffect } from 'react'
+import axios from 'axios'
+import { useState } from 'react'
+import defaultCompanyIcon from '../assets/defaultCompanyIcon.svg'
+import defaultCompanyIcon2 from '../assets/defaultCompanyIcon2.svg'
+import defaultCompanyIcon3 from '../assets/defaultCompanyIcon3.svg'
+import defaultCompanyIcon4 from '../assets/defaultCompanyIcon4.svg'
 
 const JobCards = () => {
 
-  const jobCards = [
-  { logo: appleLogo, companyName: "Apple", postTime: "5 days ago", title: "Sr. Software Engineer", salary: "$140k/yr", location: "India, Bengaluru", tags: ["Full-Time", "Senior Level"] },
-  { logo: googleLogo, companyName: "Google", postTime: "3 days ago", title: "Data Analyst", salary: "$90k/yr", location: "India, Hyderabad", tags: ["Full-Time", "Flexible Schedule"] },
-  { logo: instagramLogo, companyName: "Instagram", postTime: "1 week ago", title: "UI/UX Designer", salary: "$85/hr", location: "India, Mumbai", tags: ["Contract", "Remote"] },
-  { logo: pinterestLogo, companyName: "Pinterest", postTime: "2 days ago", title: "Frontend Developer", salary: "$100/hr", location: "India, Pune", tags: ["Full-Time", "In Office"] },
-  { logo: spotifyLogo, companyName: "Spotify", postTime: "today", title: "React Developer", salary: "$110k/yr", location: "India, Delhi", tags: ["Part-Time", "Remote"] },
-  { logo: telegramLogo, companyName: "Telegram", postTime: "6 days ago", title: "Backend Engineer", salary: "$95k/yr", location: "India, Chennai", tags: ["Full-Time", "Senior Level"] },
-  { logo: appleLogo, companyName: "Apple", postTime: "2 days ago", title: "iOS Developer", salary: "$130k/yr", location: "India, Bengaluru", tags: ["Full-Time", "Senior Level"] },
-  { logo: googleLogo, companyName: "Google", postTime: "1 day ago", title: "ML Engineer", salary: "$150k/yr", location: "India, Hyderabad", tags: ["Full-Time", "Remote"] },
-  { logo: instagramLogo, companyName: "Instagram", postTime: "3 days ago", title: "Content Strategist", salary: "$70k/yr", location: "India, Mumbai", tags: ["Part-Time", "Flexible Schedule"] },
-  { logo: pinterestLogo, companyName: "Pinterest", postTime: "5 days ago", title: "Product Designer", salary: "$95/hr", location: "India, Pune", tags: ["Contract", "Remote"] },
-  { logo: spotifyLogo, companyName: "Spotify", postTime: "1 week ago", title: "Audio Engineer", salary: "$80k/yr", location: "India, Delhi", tags: ["Full-Time", "In Office"] }
-  ];
+  const salaries = ["$60k/yr", "$80k/yr", "$90k/yr", "$120k/yr", "$30k/yr"]
+  const postTime = ["1 week ago", "5 days ago", "3 days ago", "1 day ago", "2 days ago", "today"]
+  const logos = [defaultCompanyIcon, defaultCompanyIcon2, defaultCompanyIcon3, defaultCompanyIcon4]
+
+  const [jobs, setJobs] = useState([])
+
+  const getData = async () => {
+    const jobData = await axios.get("https://www.arbeitnow.com/api/job-board-api?search=india")
+    console.log(jobData.data.data)
+    const jobCards = jobData.data.data.map((elem, idx) => ({
+        logo: logos[Math.floor(Math.random() * logos.length)],
+        companyName: elem.company_name,
+        postTime: postTime[Math.floor(Math.random() * postTime.length)],
+        title: elem.title.split("/[-:(]/")[0].slice(0, 14),
+        salary: "Not Disclosed",
+        location: elem.location,
+        tags: elem.tags,
+    }))
+    setJobs(jobCards)
+  }
+
+  useEffect(() => {
+    getData()
+  }, [])
 
   return (
     <main>
 
-      {jobCards.map((card, idx) => (
+      {jobs.map((card, idx) => (
         <Card key={idx} {...card} />
       ))}
 

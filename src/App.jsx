@@ -2,6 +2,7 @@ import React from 'react'
 import JobCards from './components/JobCards'
 
 const App = () => {
+
   return (
     <>
       <title>Job Portal</title>
